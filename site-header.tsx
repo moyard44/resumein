@@ -1,0 +1,183 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-2: var(--brand-2);
+  --gradient-hero: var(--gradient-hero);
+  --gradient-brand: var(--gradient-brand);
+  --gradient-text: var(--gradient-text);
+  --shadow-soft: var(--shadow-soft);
+  --shadow-card: var(--shadow-card);
+  --shadow-glow: var(--shadow-glow);
+}
+
+/* ResumeIN — premium dark SaaS theme (Linear/Vercel inspired) */
+:root {
+  --radius: 0.875rem;
+  --background: oklch(0.16 0.02 270);
+  --foreground: oklch(0.97 0.005 250);
+  --card: oklch(0.2 0.025 270);
+  --card-foreground: oklch(0.97 0.005 250);
+  --popover: oklch(0.18 0.025 270);
+  --popover-foreground: oklch(0.97 0.005 250);
+  --primary: oklch(0.78 0.15 220);
+  --primary-foreground: oklch(0.16 0.02 270);
+  --brand: oklch(0.78 0.15 220);
+  --brand-2: oklch(0.7 0.2 300);
+  --brand-foreground: oklch(0.16 0.02 270);
+  --secondary: oklch(0.24 0.025 270);
+  --secondary-foreground: oklch(0.97 0.005 250);
+  --muted: oklch(0.24 0.025 270);
+  --muted-foreground: oklch(0.7 0.02 260);
+  --accent: oklch(0.28 0.04 270);
+  --accent-foreground: oklch(0.97 0.005 250);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 250);
+  --success: oklch(0.72 0.17 160);
+  --success-foreground: oklch(0.16 0.02 270);
+  --warning: oklch(0.8 0.16 75);
+  --warning-foreground: oklch(0.16 0.02 270);
+  --border: oklch(1 0 0 / 0.08);
+  --input: oklch(1 0 0 / 0.1);
+  --ring: oklch(0.78 0.15 220);
+  --gradient-hero:
+    radial-gradient(ellipse at top, oklch(0.3 0.12 270 / 0.4), transparent 60%),
+    linear-gradient(135deg, oklch(0.16 0.02 270), oklch(0.18 0.04 280));
+  --gradient-brand: linear-gradient(135deg, oklch(0.78 0.15 220) 0%, oklch(0.7 0.2 300) 100%);
+  --gradient-text: linear-gradient(135deg, oklch(0.98 0.01 250) 0%, oklch(0.78 0.1 230) 100%);
+  --shadow-soft: 0 1px 2px 0 oklch(0 0 0 / 0.4);
+  --shadow-card: 0 8px 32px -8px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(1 0 0 / 0.04);
+  --shadow-glow:
+    0 0 40px -8px oklch(0.78 0.15 220 / 0.55), 0 0 80px -20px oklch(0.7 0.2 300 / 0.35);
+  --chart-1: oklch(0.78 0.15 220);
+  --chart-2: oklch(0.7 0.2 300);
+  --chart-3: oklch(0.72 0.17 160);
+  --chart-4: oklch(0.8 0.16 75);
+  --chart-5: oklch(0.65 0.22 25);
+  --sidebar: oklch(0.18 0.025 270);
+  --sidebar-foreground: oklch(0.97 0.005 250);
+  --sidebar-primary: oklch(0.78 0.15 220);
+  --sidebar-primary-foreground: oklch(0.16 0.02 270);
+  --sidebar-accent: oklch(0.24 0.025 270);
+  --sidebar-accent-foreground: oklch(0.97 0.005 250);
+  --sidebar-border: oklch(1 0 0 / 0.08);
+  --sidebar-ring: oklch(0.78 0.15 220);
+}
+
+.dark {
+  --background: oklch(0.16 0.02 270);
+  --foreground: oklch(0.97 0.005 250);
+  --card: oklch(0.2 0.025 270);
+  --card-foreground: oklch(0.97 0.005 250);
+  --popover: oklch(0.18 0.025 270);
+  --popover-foreground: oklch(0.97 0.005 250);
+  --primary: oklch(0.78 0.15 220);
+  --primary-foreground: oklch(0.16 0.02 270);
+  --secondary: oklch(0.24 0.025 270);
+  --secondary-foreground: oklch(0.97 0.005 250);
+  --muted: oklch(0.24 0.025 270);
+  --muted-foreground: oklch(0.7 0.02 260);
+  --accent: oklch(0.28 0.04 270);
+  --accent-foreground: oklch(0.97 0.005 250);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 250);
+  --border: oklch(1 0 0 / 0.08);
+  --input: oklch(1 0 0 / 0.1);
+  --ring: oklch(0.78 0.15 220);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html,
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  body {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, oklch(0.7 0.2 300 / 0.15), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 0%, oklch(0.78 0.15 220 / 0.1), transparent);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: oklch(1 0 0 / 0.03);
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    border: 1px solid oklch(1 0 0 / 0.08);
+  }
+  .text-gradient {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-brand {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-grid {
+    background-image:
+      linear-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(1 0 0 / 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 60% 50% at 50% 30%, black, transparent 80%);
+  }
+}
